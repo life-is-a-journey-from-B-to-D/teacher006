@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+html,body {
+    font-size: 16px;
+    font-family: "游ゴシック",sans-serif;
+    color: #393939;
+    background: #efefef;
+}
+
+body,div,p,h1,h2,h3,h4,ul,figure {
+    margin: 0;
+    padding: 0;
+}
+
+p,td,th,li {
+    line-height: 1.8;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: #709a00;
+}
+
+a:hover {
+    color: #95cd00;
+}
+
+a:active {
+    color: #4b6700;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 見出し */
+main h1 {
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #c84040;
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 1000px;    /* 伸縮の幅を最大1000pxに設定 */
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* ======================= ヘッダー ====================== */
+header {
+    background: #74cbfd;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    padding: 8px 0;
+    width: 160px;
+    height: 37px;
+}
+
+.menu-btn {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    background: url(images/hamburger.png) no-repeat center center;
+    background-size: contain;
+}
+
+.menu-btn1 {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    background: url(images/x.png) no-repeat center center;
+    background-size: contain;
+}
+
+.switch {
+    float: right;
+    margin: 6px 10px 0 0;
+}
+
+.hamburger-menu{
+    display: flex;
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+.menu-content {
+    width: 100%;
+    height: 80%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #65c7ff;
+}
+
+.menu-content ul {
+    padding: 50px 10px 0;
+}
+
+.menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+.menu-content ul li a:hover {
+    opacity: 0.5;
+}
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;/*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #65c7ff;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+
+#menu-btn-check:checked ~ .menu-content {
+    left: 0;/*メニューを画面内へ*/
+}
+
+@media screen and (min-width: 768px) {
+    .header-logo {
+        padding: 15px 0;
+        width: 200px;
+        height: 46px;
+    }
+    .menu-btn {
+        display: none;
+    }
+}
+
+/* ======================= ナビゲーション ====================== */
+nav {
+    background: #393939;
+}
+
+.navbar {
+    display: none;
+    list-style-type: none;
+    width: 100%;
+}
+
+.navbar a {
+    display: block;
+    padding: 0.6rem 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: #74cbfd;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex !important;
+    }
+    .navbar li{
+        flex: 1 1 auto;
+        text-align: center;
+    }
+    .navbar a.nav-current{
+        background: #74cbfd;
+    }
+}
+
+/*======================== メインエリア基本レイアウト =========================*/
+main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #efefef;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        padding-left: 30px;
+        padding-right: 30px;
+    }  
+}
+
+/* ============================== index トップページ ============================ */
+
+
+
+/* 見出し */
+.home-h2 {
+    padding-bottom: 5px;
+    margin: 30px 0 10px 0;
+    color: #c84040;
+    border-bottom: 1px dashed #c84040;
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width:768px) {
+    .gyou {
+        display: flex;
+    }
+}
+
+.gyou {
+    padding: 5px 0;
+    border: #393939 2px;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (min-width:768px) {
+    .hitotu {
+        max-width: 25%;
+    }
+}
+
+.hitotu {
+    height: auto;
+}
+
+.gazou {
+}
+
+.setumei {
+}
+
+
+
+/* =================== フッター ================== */
+footer {
+    background: #61c4fd;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.footer-container {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.footer-nav {
+    list-style-type: none;
+}
+
+.footer-nav li {
+    display: inline;
+    padding: 0 1rem 0 0;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    opacity: 0.5;
+}
+
+.footer-right {
+    text-align: right;
+    padding: 5px;
+}
